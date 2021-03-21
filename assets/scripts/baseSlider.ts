@@ -17,6 +17,9 @@ export default class NewClass extends cc.Component {
     readyToFire = false;
 
     onLoad () {
+        var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1));
+        this.node.runAction(sequence);
+        this.node.runAction(cc.moveTo(1.0, cc.v2(0,-180)));
         this.baseSliderBar.progress = 0.5;
     }
 
