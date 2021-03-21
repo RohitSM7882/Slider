@@ -20,18 +20,21 @@ export default class NewClass extends cc.Component {
     initialSprite: cc.SpriteFrame = null;
 
     onLoad () {
+        this.option.interactable = false;
         this.baseSlider.on('selectedOption',this.selectOption,this);
         this.initialSprite = this.option.normalSprite;
     }
 
     selectOption(optionName){
         
-        if(optionName.localeCompare('option2')==0){
-            console.log(optionName,'----');
+        if(optionName.localeCompare('option1')==0){
+            this.option.interactable = true;
+            console.log('Option Selected: ',optionName);
             this.option.normalSprite = this.option.pressedSprite;
         }
         else{
             this.option.normalSprite = this.initialSprite;
+            this.option.interactable = false;
         }
     }
 
