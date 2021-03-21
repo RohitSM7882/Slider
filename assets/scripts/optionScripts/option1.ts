@@ -29,7 +29,7 @@ export default class NewClass extends cc.Component {
         
         if(optionName.localeCompare('option1')==0){
             this.option.interactable = true;
-            console.log('Option Selected: ',optionName);
+            console.log('Option Selected: 1 Scoop');
             this.option.normalSprite = this.option.pressedSprite;
         }
         else{
