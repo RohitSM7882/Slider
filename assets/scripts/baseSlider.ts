@@ -16,8 +16,18 @@ export default class NewClass extends cc.Component {
     @property
     readyToFire = false;
 
-    onLoad () {
+    @property(cc.Node)
+    canvas: cc.Node = null;
 
+    onLoad () {
+        
+        this.canvas.on('moveNode',(nodeName)=>{
+            if(nodeName.localeCompare('baseSlider')==0){
+                var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1));
+                this.node.runAction(sequence);
+                this.node.runAction(cc.moveTo(1.0, cc.v2(0,-180)));
+            }
+        })
         this.baseSliderBar.progress = 0.5;
     }
 
