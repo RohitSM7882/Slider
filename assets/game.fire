@@ -1071,10 +1071,10 @@
       "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$disabledSprite": {
       "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
@@ -1467,10 +1467,10 @@
       "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$disabledSprite": {
       "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
@@ -1863,10 +1863,10 @@
       "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$disabledSprite": {
       "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
@@ -2259,10 +2259,10 @@
       "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "hoverSprite": {
-      "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
+      "__uuid__": "09d103a4-3966-436c-afea-a33a8a068b37"
     },
     "_N$disabledSprite": {
       "__uuid__": "d7334a74-85d8-4478-9ef5-a1f416589dd9"
@@ -3159,7 +3159,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -180,
+        0,
         180,
         0,
         0,
@@ -3419,6 +3419,9 @@
     },
     "instruction": {
       "__id__": 68
+    },
+    "fireButton": {
+      "__id__": 54
     },
     "_id": "ad9zdPSRBLJ4VVTrl4rnKQ"
   },

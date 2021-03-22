@@ -23,9 +23,9 @@ export default class NewClass extends cc.Component {
         
         this.canvas.on('moveNode',(nodeName)=>{
             if(nodeName.localeCompare('baseSlider')==0){
-                var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1));
+                var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(0.5));
                 this.node.runAction(sequence);
-                this.node.runAction(cc.moveTo(1.0, cc.v2(0,-180)));
+                this.node.runAction(cc.moveTo(0.5, cc.v2(0,-180)));
             }
         })
         this.baseSliderBar.progress = 0.5;

@@ -1,4 +1,3 @@
-
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -29,10 +28,15 @@ export default class NewClass extends cc.Component {
         })
 
         this.fireButton.on('readyToFire',(readyToFire)=>{
+
             if(readyToFire){
                 this.fadeOutInstruction();
-                var instrction = "Now, load the cannonbal, and fire!";
-                this.fadeInInstruction(instrction);
+                setTimeout(() => {
+                    var instrction = "Now, load the cannonball, and fire!";
+                    this.fadeInInstruction(instrction);
+                }, 
+                1000);
+
             }
         });
     }
@@ -40,17 +44,17 @@ export default class NewClass extends cc.Component {
     fadeInInstruction(instrction){
 
         this.instruction.string = instrction;
-        var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1.0));
+        var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(0.5));
         this.node.runAction(sequence);
-        this.node.runAction(cc.moveTo(1.0,cc.v2(0,180)));
+        this.node.runAction(cc.moveTo(0.5,cc.v2(0,180)));
 
     }
 
     fadeOutInstruction(){
 
-        this.node.runAction(cc.fadeOut(1.0));
+        var sequence = cc.sequence(cc.fadeOut(0.5),cc.moveTo(0,cc.v2(-180,180)));
+        this.node.runAction(sequence);
         this.node.runAction(cc.moveTo(1.0,cc.v2(180,180)));
-        this.node.runAction(cc.moveTo(0,cc.v2(-180,180)));
 
     }
 
