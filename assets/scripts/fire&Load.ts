@@ -31,6 +31,7 @@ export default class NewClass extends cc.Component {
         if(readyToFire){
             this.loadAndFire.interactable = true;
             this.loadAndFire.normalSprite = this.initialSprite;
+            this.node.emit('readyToFire',readyToFire);
         }
     }
 

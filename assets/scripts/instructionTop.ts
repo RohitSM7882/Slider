@@ -16,16 +16,42 @@ export default class NewClass extends cc.Component {
     @property(cc.Label)
     instruction: cc.Label = null;
 
+    @property(cc.Node)
+    fireButton: cc.Node =  null;
+
     onLoad () {
         
         this.canvas.on('moveNode',(nodeName)=>{
             if(nodeName.localeCompare('instructionTop')==0){
-                this.instruction.string = 'Fill the cannon with the required  amount of gunpowder \n to fire the cannonball.'
-                var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1.0));
-                this.node.runAction(sequence);
-                this.node.runAction(cc.moveTo(1.0,cc.v2(0,180)));
+                var instrction = 'Fill the cannon with the required  amount of gunpowder \n to fire the cannonball.'
+                this.fadeInInstruction(instrction);
             }
         })
+
+        this.fireButton.on('readyToFire',(readyToFire)=>{
+            if(readyToFire){
+                this.fadeOutInstruction();
+                var instrction = "Now, load the cannonbal, and fire!";
+                this.fadeInInstruction(instrction);
+            }
+        });
+    }
+
+    fadeInInstruction(instrction){
+
+        this.instruction.string = instrction;
+        var sequence = cc.sequence(cc.fadeOut(0),cc.fadeIn(1.0));
+        this.node.runAction(sequence);
+        this.node.runAction(cc.moveTo(1.0,cc.v2(0,180)));
+
+    }
+
+    fadeOutInstruction(){
+
+        this.node.runAction(cc.fadeOut(1.0));
+        this.node.runAction(cc.moveTo(1.0,cc.v2(180,180)));
+        this.node.runAction(cc.moveTo(0,cc.v2(-180,180)));
+
     }
 
     start () {
